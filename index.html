@@ -123,21 +123,10 @@
         .logo {
             display: flex; align-items: center; gap: 14px;
         }
-        .logo-icon {
-            width: 46px; height: 46px;
-            display: flex; align-items: center; justify-content: center;
-            position: relative; flex-shrink: 0;
+        .logo-img {
+            height: 52px; width: auto;
+            flex-shrink: 0;
         }
-        .logo-icon svg {
-            width: 100%; height: 100%;
-        }
-        .logo-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.35rem; letter-spacing: 0.08em;
-            color: var(--navy); line-height: 1.1;
-        }
-        .logo-text span { display: block; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--emerald); font-family: 'JetBrains Mono', monospace; font-weight: 700; }
-
         .main-nav { display: flex; align-items: center; gap: 32px; list-style: none; }
         .main-nav a {
             font-size: 14px; font-weight: 500; color: var(--text-muted);
@@ -701,11 +690,7 @@
 <header class="site-header" role="banner">
     <div class="container header-inner">
         <a href="#" class="logo">
-            <div class="logo-icon"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="24" fill="#1a3c2a"/><text x="60" y="52" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="42" font-weight="400" letter-spacing="4" fill="#fff" dominant-baseline="middle">SSR</text><line x1="20" y1="70" x2="100" y2="70" stroke="#2daf7c" stroke-width="1.5" opacity="0.6"/><text x="60" y="86" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" letter-spacing="3" fill="#2daf7c" dominant-baseline="middle">BAUFINANZIERUNGEN</text></svg></div>
-            <div class="logo-text">
-                SCHÖNGART SCHÜRLE RILL
-                <span>Baufinanzierungen</span>
-            </div>
+            <img src="https://wirsind200banken.de/wp-content/uploads/2020/06/cropped-SSR-768x255.png" alt="Schöngart Schürle Rill – wirsind200banken.de" class="logo-img">
         </a>
         <button class="nav-toggle" aria-label="Navigation öffnen" aria-expanded="false">
             <span></span><span></span><span></span>
