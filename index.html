@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schöngart, Schürle & Rill | Ihre unabhängige Baufinanzierung in Heidenheim</title>
+    <meta name="description" content="Schöngart, Schürle & Rill Baufinanzierungen OHG – Ihr unabhängiger Finanzierungsspezialist in Heidenheim an der Brenz. Über 436 Banken im Vergleich. Jetzt beraten lassen!">
+    <meta name="keywords" content="Baufinanzierung Heidenheim, Baufinanzierung unabhängig, Immobilienfinanzierung, Anschlussfinanzierung, KfW Förderung, Schöngart Schürle Rill, wirsind200banken">
+    <meta property="og:title" content="Schöngart, Schürle & Rill | Unabhängige Baufinanzierung">
+    <meta property="og:description" content="Über 436 Banken im Vergleich. Unabhängig. Persönlich. Seit 2011 in Heidenheim an der Brenz.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Schöngart, Schürle & Rill Baufinanzierungen">
+    <link rel="canonical" href="https://wirsind200banken.de/">
+    <meta name="geo.region" content="DE-BW">
+    <meta name="geo.placename" content="Heidenheim an der Brenz">
+    <meta name="geo.position" content="48.6767;10.1516">
+    <meta name="ICBM" content="48.6767, 10.1516">
+    <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://images.pexels.com">
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+    <link rel="preload" href="https://images.pexels.com/photos/7578899/pexels-photo-7578899.jpeg?auto=compress&cs=tinysrgb&w=1920" as="image" fetchpriority="high">
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('fonts/inter-regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/bebas-neue-regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/jetbrains-mono-regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('fonts/jetbrains-mono-700.woff2') format('woff2');
+        }
+    </style>
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #f7f9f8;
+            --bg-warm: #f0f5f2;
+            --bg-cream: #e8f0eb;
+            --bg-card: #ffffff;
+            --bg-dark: #0f1a14;
+
+            /* Finanz-Palette */
+            --emerald: #2daf7c;
+            --emerald-light: #5cc99e;
+            --emerald-glow: rgba(45, 175, 124, 0.12);
+            --emerald-dark: #1e8a5f;
+            --navy: #192730;
+            --navy-light: #2a3d52;
+            --gold: #d4a853;
+            --gold-light: #e8c87a;
+            --slate: #3d4f5f;
+            --warm-gray: #6b7a85;
+
+            --text-dark: #0f1a14;
+            --text-body: #3d4a42;
+            --text-muted: #6b7a6f;
+            --text-light: #a8b5ab;
+
+            --max-width: 1320px;
+
+            --fs-hero: clamp(3.2rem, 8vw + 1rem, 8rem);
+            --fs-h2: clamp(2.2rem, 5vw + 0.5rem, 4.5rem);
+            --fs-h3: clamp(1.3rem, 2vw + 0.3rem, 2rem);
+            --fs-body: clamp(1rem, 1.1vw, 1.15rem);
+            --fs-small: clamp(0.8rem, 0.9vw, 0.9rem);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text-body);
+            background: var(--bg-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(20px, 4vw, 60px); }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 18px 0;
+            background: rgba(247, 249, 248, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(45, 175, 124, 0.08);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .site-header.scrolled {
+            padding: 10px 0;
+            background: rgba(247, 249, 248, 0.95);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 14px;
+        }
+        .logo-icon {
+            width: 42px; height: 42px; background: var(--emerald);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+            letter-spacing: 0.05em; position: relative; overflow: hidden;
+        }
+        .logo-icon::after {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer { 0%, 100% { transform: translateX(-100%); } 50% { transform: translateX(100%); } }
+        .logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.35rem; letter-spacing: 0.08em;
+            color: var(--navy); line-height: 1.1;
+        }
+        .logo-text span { display: block; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--emerald); font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+
+        .main-nav { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .main-nav a {
+            font-size: 14px; font-weight: 500; color: var(--text-muted);
+            letter-spacing: 0.02em; transition: color 0.3s ease;
+            position: relative;
+        }
+        .main-nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--emerald);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover { color: var(--navy); }
+        .main-nav a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--navy); color: #fff !important;
+            padding: 12px 28px; border-radius: 50px;
+            font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none; cursor: pointer;
+        }
+        .nav-cta:hover { background: var(--emerald); transform: translateY(-1px); }
+        .nav-cta::after { display: none !important; }
+
+        .nav-toggle {
+            display: none; background: none; border: none; cursor: pointer;
+            width: 30px; height: 24px; position: relative; z-index: 1001;
+        }
+        .nav-toggle span {
+            display: block; width: 100%; height: 2px;
+            background: var(--navy); border-radius: 2px;
+            transition: all 0.3s ease; position: absolute; left: 0;
+        }
+        .nav-toggle span:nth-child(1) { top: 0; }
+        .nav-toggle span:nth-child(2) { top: 11px; }
+        .nav-toggle span:nth-child(3) { bottom: 0; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            position: relative; overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg {
+            position: absolute; inset: 0; z-index: 0;
+        }
+        .hero-bg img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(15,26,20,0.82) 0%, rgba(45,175,124,0.35) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative; z-index: 2;
+            max-width: 820px;
+        }
+        .hero-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: var(--fs-small); font-weight: 700;
+            color: var(--emerald-light);
+            letter-spacing: 0.2em; text-transform: uppercase;
+            margin-bottom: 24px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .hero-eyebrow::before {
+            content: ''; width: 40px; height: 2px;
+            background: var(--emerald); display: inline-block;
+        }
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: var(--fs-hero);
+            color: #fff; line-height: 0.95;
+            letter-spacing: 0.02em;
+            margin-bottom: 28px;
+        }
+        .hero h1 .accent { color: var(--emerald-light); }
+        .hero-sub {
+            font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+            color: rgba(255,255,255,0.75);
+            max-width: 560px; line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--emerald); color: #fff;
+            padding: 16px 36px; border-radius: 50px;
+            font-size: 15px; font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none; cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(45,175,124,0.3); }
+        .btn-primary svg { width: 18px; height: 18px; transition: transform 0.3s ease; }
+        .btn-primary:hover svg { transform: translateX(4px); }
+
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.1); color: #fff;
+            padding: 16px 36px; border-radius: 50px;
+            font-size: 15px; font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s ease; cursor: pointer;
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--bg-card);
+            border-bottom: 1px solid rgba(45,175,124,0.08);
+            padding: 0;
+            position: relative; z-index: 5;
+        }
+        .trust-inner {
+            display: flex; align-items: stretch; justify-content: center;
+        }
+        .trust-item {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            gap: 16px; padding: 28px 20px;
+            border-right: 1px solid rgba(0,0,0,0.06);
+            transition: background 0.3s ease;
+        }
+        .trust-item:last-child { border-right: none; }
+        .trust-item:hover { background: var(--emerald-glow); }
+        .trust-icon {
+            width: 48px; height: 48px; border-radius: 14px;
+            background: var(--emerald-glow);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .trust-icon svg { width: 22px; height: 22px; color: var(--emerald); }
+        .trust-text strong { display: block; font-size: 14px; color: var(--navy); font-weight: 700; }
+        .trust-text span { font-size: 12px; color: var(--text-muted); }
+
+        /* ===== SECTION STYLING ===== */
+        .section-eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: var(--fs-small); font-weight: 700;
+            color: var(--emerald);
+            letter-spacing: 0.2em; text-transform: uppercase;
+            margin-bottom: 16px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .section-eyebrow::before {
+            content: ''; width: 30px; height: 2px;
+            background: var(--emerald); display: inline-block;
+        }
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: var(--fs-h2); color: var(--navy);
+            line-height: 1; letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+        .section-title .accent { color: var(--emerald); }
+        .section-subtitle {
+            font-size: var(--fs-body); color: var(--text-muted);
+            max-width: 600px; line-height: 1.8;
+        }
+        .section-warm { background: var(--bg-warm); }
+        .section-padding { padding: clamp(80px, 12vw, 160px) 0; }
+
+        /* ===== SERVICE CARDS ===== */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 30px; margin-top: 60px;
+        }
+        .service-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+            border-color: var(--emerald);
+        }
+        .service-card-img {
+            height: 220px; overflow: hidden; position: relative;
+        }
+        .service-card-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .service-card:hover .service-card-img img { transform: scale(1.08); }
+        .service-card-number {
+            position: absolute; top: 16px; left: 16px;
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--emerald);
+            color: #fff; font-family: 'JetBrains Mono', monospace;
+            font-size: 13px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .service-card-body {
+            padding: 30px;
+        }
+        .service-card-body h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem; color: var(--navy);
+            letter-spacing: 0.04em; margin-bottom: 12px;
+        }
+        .service-card-body p {
+            font-size: 14px; color: var(--text-muted);
+            line-height: 1.8;
+        }
+        .service-card-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            margin-top: 20px; font-size: 13px; font-weight: 600;
+            color: var(--emerald); letter-spacing: 0.02em;
+            transition: gap 0.3s ease;
+        }
+        .service-card-link:hover { gap: 14px; }
+        .service-card-link svg { width: 16px; height: 16px; }
+
+        /* ===== STATS ===== */
+        .stats-section {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a3a2a 100%);
+            padding: clamp(60px, 8vw, 100px) 0;
+            position: relative; overflow: hidden;
+        }
+        .stats-section::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(45,175,124,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 40px; position: relative; z-index: 1;
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            color: var(--emerald-light);
+            line-height: 1; margin-bottom: 8px;
+        }
+        .stat-number .counter-suffix { font-size: 0.6em; }
+        .stat-label {
+            font-size: 13px; color: rgba(255,255,255,0.5);
+            letter-spacing: 0.06em; text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* ===== ABOUT / TEAM ===== */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 80px; align-items: center;
+        }
+        .about-image-wrapper {
+            position: relative; border-radius: 24px; overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+        .about-image-wrapper img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .about-image-badge {
+            position: absolute; bottom: 24px; left: 24px;
+            background: var(--emerald); color: #fff;
+            padding: 14px 22px; border-radius: 14px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .about-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem; font-weight: 600;
+            color: var(--navy); margin-top: 30px; margin-bottom: 12px;
+        }
+        .about-content p {
+            color: var(--text-muted); line-height: 1.9;
+        }
+
+        /* ===== PROCESS / HOW WE WORK ===== */
+        .process-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 30px; margin-top: 60px;
+        }
+        .process-step {
+            text-align: center; padding: 40px 24px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .process-step:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+            border-color: var(--emerald);
+        }
+        .process-step-number {
+            width: 56px; height: 56px; margin: 0 auto 20px;
+            background: var(--emerald-glow);
+            border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem; color: var(--emerald);
+        }
+        .process-step h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem; color: var(--navy);
+            letter-spacing: 0.04em; margin-bottom: 10px;
+        }
+        .process-step p {
+            font-size: 13px; color: var(--text-muted); line-height: 1.8;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 30px; margin-top: 60px;
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: 20px; padding: 36px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
+        .testimonial-stars {
+            display: flex; gap: 3px; margin-bottom: 18px;
+        }
+        .testimonial-stars svg { width: 18px; height: 18px; color: var(--gold); fill: var(--gold); }
+        .testimonial-text {
+            font-size: 15px; color: var(--text-body);
+            line-height: 1.8; margin-bottom: 24px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex; align-items: center; gap: 14px;
+        }
+        .testimonial-avatar {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--emerald-glow);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem; color: var(--emerald);
+        }
+        .testimonial-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+        .testimonial-date { font-size: 12px; color: var(--text-muted); }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            padding: clamp(60px, 10vw, 120px) 0;
+            text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cta-section::before {
+            content: ''; position: absolute; top: -30%; left: -10%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: var(--fs-h2); color: #fff;
+            line-height: 1; margin-bottom: 16px;
+        }
+        .cta-section p {
+            color: rgba(255,255,255,0.8);
+            font-size: var(--fs-body); max-width: 500px;
+            margin: 0 auto 36px; line-height: 1.8;
+        }
+        .btn-cta-white {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #fff; color: var(--emerald-dark);
+            padding: 18px 42px; border-radius: 50px;
+            font-size: 15px; font-weight: 700;
+            transition: all 0.4s ease;
+            border: none; cursor: pointer;
+        }
+        .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: start;
+        }
+        .contact-info-item {
+            display: flex; gap: 18px; align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .contact-info-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            background: var(--emerald-glow);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .contact-info-icon svg { width: 22px; height: 22px; color: var(--emerald); }
+        .contact-info-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+        .contact-info-value { font-size: 16px; color: var(--navy); font-weight: 600; margin-top: 4px; }
+        .contact-info-value a { color: var(--navy); transition: color 0.3s; }
+        .contact-info-value a:hover { color: var(--emerald); }
+
+        .contact-form { background: var(--bg-card); border-radius: 24px; padding: 48px; border: 1px solid rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 12px; font-weight: 600;
+            color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.1em; margin-bottom: 8px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 14px 18px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 12px; font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--emerald);
+            box-shadow: 0 0 0 4px var(--emerald-glow);
+        }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .btn-submit {
+            width: 100%; padding: 16px;
+            background: var(--emerald); color: #fff;
+            border: none; border-radius: 12px;
+            font-size: 15px; font-weight: 700;
+            cursor: pointer; transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-submit:hover { background: var(--emerald-dark); transform: translateY(-1px); }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--bg-dark); color: rgba(255,255,255,0.5);
+            padding: 80px 0 30px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 50px; margin-bottom: 60px;
+        }
+        .footer-brand-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem; color: var(--emerald);
+            letter-spacing: 0.08em; margin-bottom: 20px; line-height: 1.2;
+        }
+        .footer-brand p {
+            font-size: 13px; color: rgba(255,255,255,0.35);
+            line-height: 1.8; max-width: 280px;
+        }
+        .footer-col h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px; font-weight: 700;
+            color: rgba(255,255,255,0.8); text-transform: uppercase;
+            letter-spacing: 0.15em; margin-bottom: 25px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a {
+            font-size: 14px; color: rgba(255,255,255,0.35);
+            transition: color 0.3s ease;
+        }
+        .footer-col ul li a:hover { color: var(--emerald); }
+        .footer-bottom {
+            padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+        .footer-bottom a { color: var(--emerald); }
+
+        /* ===== LEGAL PAGES ===== */
+        .legal-section { padding: clamp(80px, 10vw, 140px) 0; }
+        .legal-section h3 { color: var(--navy); font-size: 18px; font-weight: 700; margin: 2rem 0 0.5rem; }
+        .legal-section p, .legal-section li { color: var(--text-body); font-size: 15px; line-height: 2; }
+        .legal-section a { color: var(--emerald); }
+        .legal-section ul { margin: 1rem 0; padding-left: 2rem; }
+        .legal-section strong { color: var(--navy); }
+
+        /* ===== SCROLL REVEAL ===== */
+        .scroll-reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+
+        /* ===== PHONE LINK ===== */
+        .btn-phone {
+            display: inline-flex; align-items: center; gap: 10px;
+            color: var(--emerald); font-weight: 600; font-size: 15px;
+            transition: color 0.3s;
+        }
+        .btn-phone:hover { color: var(--emerald-dark); }
+        .btn-phone svg { width: 18px; height: 18px; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .main-nav {
+                position: fixed; top: 0; right: -100%;
+                width: 85%; max-width: 360px; height: 100vh;
+                background: var(--bg-card);
+                flex-direction: column; align-items: flex-start;
+                padding: 100px 40px 40px; gap: 24px;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .main-nav.open { right: 0; }
+            .main-nav a { font-size: 18px; }
+            .nav-toggle { display: block; }
+            .trust-inner { flex-direction: column; }
+            .trust-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); justify-content: flex-start; }
+            .trust-item:last-child { border-bottom: none; }
+            .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <div class="logo-icon">SSR</div>
+            <div class="logo-text">
+                SCHÖNGART SCHÜRLE RILL
+                <span>Baufinanzierungen</span>
+            </div>
+        </a>
+        <button class="nav-toggle" aria-label="Navigation öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" role="navigation">
+            <a href="#leistungen">Leistungen</a>
+            <a href="#so-arbeiten-wir">So arbeiten wir</a>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#bewertungen">Kundenstimmen</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="tel:+497321309975O" class="nav-cta">+49 7321 30997-50</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg">
+        <img src="https://images.pexels.com/photos/7578899/pexels-photo-7578899.jpeg?auto=compress&cs=tinysrgb&w=1920"
+             srcset="https://images.pexels.com/photos/7578899/pexels-photo-7578899.jpeg?auto=compress&cs=tinysrgb&w=640 640w,
+                     https://images.pexels.com/photos/7578899/pexels-photo-7578899.jpeg?auto=compress&cs=tinysrgb&w=1280 1280w,
+                     https://images.pexels.com/photos/7578899/pexels-photo-7578899.jpeg?auto=compress&cs=tinysrgb&w=1920 1920w"
+             sizes="100vw" alt="Baufinanzierungsberatung" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="hero-eyebrow scroll-reveal">Unabhängige Baufinanzierung</div>
+        <h1 class="scroll-reveal stagger-1">
+            ÜBER 436 BANKEN.<br>
+            <span class="accent">EIN ZIEL.</span><br>
+            IHRE TRAUMIMMOBILIE.
+        </h1>
+        <p class="hero-sub scroll-reveal stagger-2">
+            Banken- und produktunabhängige Baufinanzierung in Heidenheim an der Brenz.
+            Wir vergleichen für Sie — persönlich, transparent & fair.
+        </p>
+        <div class="hero-buttons scroll-reveal stagger-3">
+            <a href="#kontakt" class="btn-primary">
+                Kostenlos beraten lassen
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+4973213099750" class="btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                +49 7321 30997-50
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <div class="container">
+        <div class="trust-inner">
+            <div class="trust-item scroll-reveal">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="trust-text">
+                    <strong>436 Banken</strong>
+                    <span>im unabhängigen Vergleich</span>
+                </div>
+            </div>
+            <div class="trust-item scroll-reveal stagger-1">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="trust-text">
+                    <strong>4,99 / 5 Sterne</strong>
+                    <span>426 verifizierte Bewertungen</span>
+                </div>
+            </div>
+            <div class="trust-item scroll-reveal stagger-2">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div class="trust-text">
+                    <strong>2.000+ Kunden</strong>
+                    <span>erfolgreich finanziert</span>
+                </div>
+            </div>
+            <div class="trust-item scroll-reveal stagger-3">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="trust-text">
+                    <strong>24h Rückmeldung</strong>
+                    <span>garantierte Antwortzeit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LEISTUNGEN -->
+<section class="section-padding" id="leistungen">
+    <div class="container">
+        <div class="section-eyebrow scroll-reveal">Unsere Leistungen</div>
+        <h2 class="section-title scroll-reveal stagger-1">FINANZIERUNG,<br>DIE ZU IHNEN <span class="accent">PASST.</span></h2>
+        <p class="section-subtitle scroll-reveal stagger-2">Ob Neubau, Kauf oder Anschlussfinanzierung — wir finden das maßgeschneiderte Paket für Ihren Traum vom Eigenheim.</p>
+
+        <div class="services-grid">
+            <div class="service-card scroll-reveal">
+                <div class="service-card-img">
+                    <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         srcset="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                                 https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+                         sizes="(max-width: 768px) 100vw, 33vw" alt="Neubau Finanzierung" loading="lazy">
+                    <div class="service-card-number">01</div>
+                </div>
+                <div class="service-card-body">
+                    <h3>NEUBAU & KAUF</h3>
+                    <p>Sie planen ein Eigenheim oder möchten eine Immobilie kaufen? Wir vergleichen über 436 Banken und finden die günstigste Finanzierung für Sie.</p>
+                    <a href="#kontakt" class="service-card-link">
+                        Jetzt beraten lassen
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card scroll-reveal stagger-1">
+                <div class="service-card-img">
+                    <img src="https://images.pexels.com/photos/7821513/pexels-photo-7821513.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         srcset="https://images.pexels.com/photos/7821513/pexels-photo-7821513.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                                 https://images.pexels.com/photos/7821513/pexels-photo-7821513.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+                         sizes="(max-width: 768px) 100vw, 33vw" alt="Anschlussfinanzierung" loading="lazy">
+                    <div class="service-card-number">02</div>
+                </div>
+                <div class="service-card-body">
+                    <h3>ANSCHLUSSFINANZIERUNG</h3>
+                    <p>Ihr Darlehen läuft aus? Ob Prolongation, Umschuldung oder Forward-Darlehen — wir sichern Ihnen die besten Konditionen bis zu 60 Monate im Voraus.</p>
+                    <a href="#kontakt" class="service-card-link">
+                        Konditionen sichern
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="service-card scroll-reveal stagger-2">
+                <div class="service-card-img">
+                    <img src="https://images.pexels.com/photos/4386396/pexels-photo-4386396.jpeg?auto=compress&cs=tinysrgb&w=800"
+                         srcset="https://images.pexels.com/photos/4386396/pexels-photo-4386396.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                                 https://images.pexels.com/photos/4386396/pexels-photo-4386396.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+                         sizes="(max-width: 768px) 100vw, 33vw" alt="Fördermittel Beratung" loading="lazy">
+                    <div class="service-card-number">03</div>
+                </div>
+                <div class="service-card-body">
+                    <h3>FÖRDERMITTEL</h3>
+                    <p>KfW, L-Bank oder kommunale Zuschüsse — wir kennen alle Förderprogramme und holen für Sie das Maximum an Zuschüssen und Zinsvorteilen heraus.</p>
+                    <a href="#kontakt" class="service-card-link">
+                        Förderung prüfen
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item scroll-reveal">
+                <div class="stat-number"><span class="counter" data-target="436">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Partnerbanken</div>
+            </div>
+            <div class="stat-item scroll-reveal stagger-1">
+                <div class="stat-number"><span class="counter" data-target="2000">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Zufriedene Kunden</div>
+            </div>
+            <div class="stat-item scroll-reveal stagger-2">
+                <div class="stat-number"><span class="counter" data-target="14">0</span></div>
+                <div class="stat-label">Jahre Erfahrung</div>
+            </div>
+            <div class="stat-item scroll-reveal stagger-3">
+                <div class="stat-number"><span class="counter" data-target="426">0</span></div>
+                <div class="stat-label">5-Sterne-Bewertungen</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SO ARBEITEN WIR -->
+<section class="section-padding section-warm" id="so-arbeiten-wir">
+    <div class="container">
+        <div class="section-eyebrow scroll-reveal">So arbeiten wir</div>
+        <h2 class="section-title scroll-reveal stagger-1">IN 4 SCHRITTEN<br>ZU IHRER <span class="accent">FINANZIERUNG.</span></h2>
+        <p class="section-subtitle scroll-reveal stagger-2">Transparent, persönlich und immer in Ihrem Interesse — so begleiten wir Sie auf dem Weg zu Ihrem Eigenheim.</p>
+
+        <div class="process-grid">
+            <div class="process-step scroll-reveal">
+                <div class="process-step-number">01</div>
+                <h3>ERSTGESPRÄCH</h3>
+                <p>Wir lernen Ihre Wünsche und Ihre finanzielle Situation kennen — kostenlos und unverbindlich.</p>
+            </div>
+            <div class="process-step scroll-reveal stagger-1">
+                <div class="process-step-number">02</div>
+                <h3>ANALYSE & VERGLEICH</h3>
+                <p>Wir vergleichen die Angebote von über 436 Banken und Sparkassen, um das beste Paket für Sie zu finden.</p>
+            </div>
+            <div class="process-step scroll-reveal stagger-2">
+                <div class="process-step-number">03</div>
+                <h3>FINANZIERUNGSPLAN</h3>
+                <p>Sie erhalten einen maßgeschneiderten Finanzierungsplan mit allen Details — transparent und verständlich.</p>
+            </div>
+            <div class="process-step scroll-reveal stagger-3">
+                <div class="process-step-number">04</div>
+                <h3>BEGLEITUNG</h3>
+                <p>Wir bleiben an Ihrer Seite — bis zur Unterschrift beim Notar und darüber hinaus.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section class="section-padding" id="ueber-uns">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-wrapper scroll-reveal">
+                <img src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=800"
+                     srcset="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                             https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
+                     sizes="(max-width: 1024px) 100vw, 50vw" alt="Team Schöngart Schürle Rill" loading="lazy">
+                <div class="about-image-badge">Seit 2011</div>
+            </div>
+            <div class="scroll-reveal stagger-1">
+                <div class="section-eyebrow">Über uns</div>
+                <h2 class="section-title">IHR TEAM FÜR<br><span class="accent">BAUFINANZIERUNG.</span></h2>
+                <p class="about-content" style="color: var(--text-muted); line-height: 1.9; margin-bottom: 20px;">
+                    Als eingespieltes Team, ausschließlich spezialisiert auf Baufinanzierungen, erstellen wir Ihren persönlichen Finanzierungsplan — banken- und produktunabhängig.
+                </p>
+                <h3 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-top: 28px; margin-bottom: 8px;">Michael Schöngart</h3>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 16px;">Banker seit 1996. Geprüfter Kreditanalyst für Baufinanzierungen. Über 25 Jahre Erfahrung bei Groß- und Genossenschaftsbanken.</p>
+                <h3 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;">Christian Schürle</h3>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 16px;">Jurist (Universität Tübingen). 10 Jahre als zertifizierter Baufinanzierungsberater bei einer Regionalbank.</p>
+                <h3 style="font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;">Stephanie Riek</h3>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.8;">Bankbetriebswirtin. Erfahrung bei Großbanken und regionalen Sparkassen. Ihr Ansprechpartner für präzise Kreditanalysen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KUNDENSTIMMEN -->
+<section class="section-padding section-warm" id="bewertungen">
+    <div class="container">
+        <div class="section-eyebrow scroll-reveal">Kundenstimmen</div>
+        <h2 class="section-title scroll-reveal stagger-1">DAS SAGEN UNSERE<br><span class="accent">KUNDEN.</span></h2>
+        <p class="section-subtitle scroll-reveal stagger-2">4,99 von 5 Sternen bei über 426 verifizierten Bewertungen auf KennstDuEinen.de</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card scroll-reveal">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">„Die verstehen ihr Handwerk! Von der ersten Beratung bis zur finalen Unterschrift wurde alles professionell, schnell und transparent abgewickelt."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">RS</div>
+                    <div>
+                        <div class="testimonial-name">Rudi S.</div>
+                        <div class="testimonial-date">Dezember 2025</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card scroll-reveal stagger-1">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">„Mit Herrn Rill habe ich den kompetentesten, freundlichsten und höflichsten Finanzberater kennengelernt. Die beste Starthilfe ins Eigenheim!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">WB</div>
+                    <div>
+                        <div class="testimonial-name">Wolfgang B.</div>
+                        <div class="testimonial-date">September 2025</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card scroll-reveal stagger-2">
+                <div class="testimonial-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial-text">„Vom ersten Kontakt bis zum Kauf der Immobilie wurde ich hervorragend betreut. Fünf Sterne sind hier mehr als verdient!"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">ES</div>
+                    <div>
+                        <div class="testimonial-name">Elisa S.</div>
+                        <div class="testimonial-date">August 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container" style="position: relative; z-index: 1;">
+        <h2 class="scroll-reveal">BEREIT FÜR IHR EIGENHEIM?</h2>
+        <p class="scroll-reveal stagger-1">Vereinbaren Sie jetzt Ihr kostenloses Erstgespräch. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        <a href="#kontakt" class="btn-cta-white scroll-reveal stagger-2">
+            Jetzt Termin vereinbaren
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section-padding" id="kontakt">
+    <div class="container">
+        <div class="section-eyebrow scroll-reveal">Kontakt</div>
+        <h2 class="section-title scroll-reveal stagger-1">LASSEN SIE SICH<br><span class="accent">BERATEN.</span></h2>
+        <p class="section-subtitle scroll-reveal stagger-2" style="margin-bottom: 50px;">Persönlich, telefonisch oder per Kontaktformular — wir sind für Sie da.</p>
+
+        <div class="contact-grid">
+            <div class="scroll-reveal">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-info-label">Adresse</div>
+                        <div class="contact-info-value">Paul-Hartmann-Str. 61<br>89522 Heidenheim an der Brenz</div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-info-label">Telefon</div>
+                        <div class="contact-info-value"><a href="tel:+4973213099750">+49 (0)7321 / 30997-50</a></div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-info-label">E-Mail</div>
+                        <div class="contact-info-value"><a href="mailto:info@wirsind200banken.de">info@wirsind200banken.de</a></div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-info-label">Fax</div>
+                        <div class="contact-info-value">+49 (0)7321 / 30997-51</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form scroll-reveal stagger-1">
+                <form onsubmit="handleKontaktSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="k_name">Ihr Name *</label>
+                            <input type="text" id="k_name" name="k_name" required placeholder="Max Mustermann">
+                        </div>
+                        <div class="form-group">
+                            <label for="k_telefon">Telefon *</label>
+                            <input type="tel" id="k_telefon" name="k_telefon" required placeholder="+49 ...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="k_email">E-Mail</label>
+                        <input type="email" id="k_email" name="k_email" placeholder="ihre@email.de">
+                    </div>
+                    <div class="form-group">
+                        <label for="k_leistung">Gewünschte Leistung</label>
+                        <select id="k_leistung" name="k_leistung">
+                            <option value="">Bitte wählen...</option>
+                            <option value="Neubau">Neubau-Finanzierung</option>
+                            <option value="Kauf">Immobilienkauf</option>
+                            <option value="Anschlussfinanzierung">Anschlussfinanzierung</option>
+                            <option value="Fördermittel">Fördermittel-Beratung</option>
+                            <option value="Sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="k_nachricht">Ihre Nachricht *</label>
+                        <textarea id="k_nachricht" name="k_nachricht" required placeholder="Beschreiben Sie kurz Ihr Vorhaben..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="kontaktSubmitBtn">
+                        Anfrage senden
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMPRESSUM -->
+<section class="legal-section section-warm" id="impressum">
+    <div class="container" style="max-width: 800px;">
+        <div class="section-eyebrow scroll-reveal">Rechtliches</div>
+        <h2 class="section-title scroll-reveal stagger-1">Impressum</h2>
+
+        <div>
+            <h3>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</h3>
+            <p>
+                Schöngart, Schürle & Rill Baufinanzierungen OHG<br>
+                Paul-Hartmann-Str. 61<br>
+                89522 Heidenheim an der Brenz
+            </p>
+
+            <h3>Vertreten durch</h3>
+            <p>Michael Schöngart und Christian Rill</p>
+
+            <h3>Kontakt</h3>
+            <p>
+                Telefon: <a href="tel:+4973213099750">+49 (0)7321 / 30997-50</a><br>
+                Fax: +49 (0)7321 / 30997-51<br>
+                E-Mail: <a href="mailto:info@wirsind200banken.de">info@wirsind200banken.de</a>
+            </p>
+
+            <h3>Registereintrag</h3>
+            <p>
+                Handelsregister: Amtsgericht Ulm<br>
+                <strong style="color: var(--emerald);">[Registernummer bitte ergänzen]</strong>
+            </p>
+
+            <h3>Berufsrechtliche Angaben</h3>
+            <p>
+                Vermittlerregister: <a href="https://www.vermittlerregister.info" target="_blank" rel="noopener">www.vermittlerregister.info</a><br>
+                <strong style="color: var(--emerald);">[Registrierungsnummer bitte ergänzen]</strong><br>
+                Erlaubnis nach § 34i GewO (Immobiliardarlehensvermittler)
+            </p>
+            <p>
+                Zuständige Aufsichtsbehörde: IHK Ostwürttemberg<br>
+                Ludwig-Erhard-Straße 1, 89520 Heidenheim<br>
+                <a href="https://www.ostwuerttemberg.ihk.de" target="_blank" rel="noopener">www.ostwuerttemberg.ihk.de</a>
+            </p>
+
+            <h3>Umsatzsteuer-Identifikationsnummer</h3>
+            <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
+                <strong style="color: var(--emerald);">[USt-IdNr. bitte ergänzen]</strong>
+            </p>
+
+            <h3>Streitschlichtung</h3>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+            <h3>Haftung für Inhalte</h3>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+            <h3>Haftung für Links</h3>
+            <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+            <h3>Urheberrecht</h3>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+            <h3>Webseitenerstellung</h3>
+            <p>Diese Website wurde erstellt von: <a href="https://www.lanecoreai.com" target="_blank" rel="noopener">LaneCore AI</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- DATENSCHUTZ -->
+<section class="legal-section" id="datenschutz">
+    <div class="container" style="max-width: 800px;">
+        <div class="section-eyebrow scroll-reveal">Rechtliches</div>
+        <h2 class="section-title scroll-reveal stagger-1">Datenschutz&shy;erklärung</h2>
+
+        <div>
+            <h3>1. Verantwortlicher</h3>
+            <p>Schöngart, Schürle & Rill Baufinanzierungen OHG<br>Paul-Hartmann-Str. 61<br>89522 Heidenheim an der Brenz<br>Telefon: +49 (0)7321 / 30997-50<br>E-Mail: info@wirsind200banken.de</p>
+
+            <h3>2. Allgemeine Hinweise zur Datenverarbeitung</h3>
+            <p>Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, BDSG, DDG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung auf unserer Website.</p>
+
+            <h3>3. Hosting</h3>
+            <p>Diese Website wird über GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. GitHub kann beim Zugriff auf die Website automatisch Informationen in sogenannten Server-Log-Dateien speichern, die Ihr Browser automatisch übermittelt (z. B. IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL, Zeitpunkt des Zugriffs). Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+
+            <h3>4. Schriftarten (lokal gehostet)</h3>
+            <p>Diese Website verwendet lokal gehostete Schriftarten (Inter, Bebas Neue, JetBrains Mono). Es werden keine Verbindungen zu externen Font-Servern (z. B. Google Fonts) hergestellt. Dadurch werden keine personenbezogenen Daten an Dritte übertragen.</p>
+
+            <h3>5. Externe Bilder (Pexels)</h3>
+            <p>Auf dieser Website werden Bilder des Dienstes Pexels (Pexels GmbH / Canva) eingebunden. Beim Laden dieser Bilder kann Ihr Browser eine Verbindung zu den Servern von Pexels herstellen, wobei Ihre IP-Adresse übertragen wird. Weitere Informationen finden Sie in der Datenschutzerklärung von Pexels: <a href="https://www.pexels.com/privacy-policy/" target="_blank" rel="noopener">www.pexels.com/privacy-policy/</a>. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+            <h3>6. Kontaktaufnahme per E-Mail und Telefon</h3>
+            <p>Wenn Sie uns per E-Mail, Telefon oder über das Kontaktformular kontaktieren, werden Ihre Angaben (Name, Telefonnummer, E-Mail, Nachricht) zur Bearbeitung Ihrer Anfrage bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen).</p>
+
+            <h3>7. Cookies</h3>
+            <p>Diese Website verwendet keine eigenen Cookies. Es werden keine Tracking- oder Analyse-Tools eingesetzt.</p>
+
+            <h3>8. Ihre Rechte als betroffene Person</h3>
+            <p>Nach der DSGVO stehen Ihnen folgende Rechte zu:</p>
+            <ul>
+                <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
+                <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO)</li>
+                <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO)</li>
+                <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+                <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+                <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
+                <li><strong>Recht auf Widerruf der Einwilligung</strong> (Art. 7 Abs. 3 DSGVO)</li>
+            </ul>
+            <p>Zuständige Aufsichtsbehörde: Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
+
+            <h3>9. SSL-/TLS-Verschlüsselung</h3>
+            <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+
+            <h3>10. Aktualität dieser Datenschutzerklärung</h3>
+            <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-text">SCHÖNGART SCHÜRLE & RILL<br>BAUFINANZIERUNGEN</div>
+                <p>Unabhängige Baufinanzierungsberatung in Heidenheim an der Brenz. Über 436 Banken im Vergleich — seit 2011.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Leistungen</h4>
+                <ul>
+                    <li><a href="#leistungen">Neubau & Kauf</a></li>
+                    <li><a href="#leistungen">Anschlussfinanzierung</a></li>
+                    <li><a href="#leistungen">Fördermittel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Unternehmen</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#so-arbeiten-wir">So arbeiten wir</a></li>
+                    <li><a href="#bewertungen">Kundenstimmen</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="#impressum">Impressum</a></li>
+                    <li><a href="#datenschutz">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Schöngart, Schürle & Rill Baufinanzierungen OHG</p>
+            <p>Crafted by <a href="https://www.lanecoreai.com" target="_blank" rel="noopener noreferrer">LaneCore AI</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* ===== HEADER SCROLL ===== */
+    (function() {
+        var header = document.querySelector('.site-header');
+        window.addEventListener('scroll', function() {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+    })();
+
+    /* ===== MOBILE NAV TOGGLE ===== */
+    (function() {
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', function() {
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('open');
+        });
+    })();
+
+    /* ===== SCROLL REVEAL ===== */
+    (function() {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.scroll-reveal').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+
+    /* ===== COUNTER ANIMATION ===== */
+    function startCounters() {
+        document.querySelectorAll('.counter').forEach(function(counter) {
+            if (counter.dataset.started) return;
+            counter.dataset.started = 'true';
+            var target = parseInt(counter.dataset.target);
+            var duration = 2200;
+            var startTime = performance.now() + 200;
+            function update(now) {
+                var elapsed = now - startTime;
+                if (elapsed < 0) { requestAnimationFrame(update); return; }
+                var p = Math.min(elapsed / duration, 1);
+                var eased = p < 0.6
+                    ? 1 - Math.pow(1 - (p / 0.6), 5)
+                    : 1 + (Math.sin((p - 0.6) * Math.PI / 0.4) * 0.02 * (1 - p));
+                counter.textContent = Math.floor(Math.min(eased, 1) * target).toLocaleString('de-DE');
+                if (p >= 0.95 && !counter.dataset.popped) {
+                    counter.dataset.popped = 'true';
+                    var parent = counter.closest('.stat-number');
+                    if (parent) {
+                        parent.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                        parent.style.transform = 'scale(1.08)';
+                        setTimeout(function() { parent.style.transform = 'scale(1)'; }, 300);
+                    }
+                }
+                if (p < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+        });
+    }
+    var counterObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) startCounters();
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.stats-section').forEach(function(el) {
+        counterObs.observe(el);
+    });
+
+    /* ===== SMOOTH ANCHOR LINKS ===== */
+    document.addEventListener('click', function(e) {
+        var anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        e.preventDefault();
+        var targetEl = document.querySelector(anchor.getAttribute('href'));
+        if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.querySelector('.main-nav').classList.remove('open');
+            var toggle = document.querySelector('.nav-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    /* ===== MAGNETIC BUTTON EFFECT ===== */
+    document.querySelectorAll('.btn-primary, .btn-cta-white, .nav-cta').forEach(function(btn) {
+        btn.addEventListener('mousemove', function(e) {
+            var rect = this.getBoundingClientRect();
+            var x = e.clientX - rect.left - rect.width / 2;
+            var y = e.clientY - rect.top - rect.height / 2;
+            this.style.transform = 'translate(' + (x * 0.12) + 'px,' + (y * 0.12) + 'px) scale(1.03)';
+        });
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            var self = this;
+            setTimeout(function() { self.style.transition = ''; }, 400);
+        });
+    });
+
+    /* ===== HERO PARALLAX ===== */
+    (function() {
+        var heroContent = document.querySelector('.hero-content');
+        if (!heroContent) return;
+        window.addEventListener('scroll', function() {
+            var opacity = Math.max(0, 1 - (window.scrollY / 500));
+            heroContent.style.opacity = opacity;
+            heroContent.style.transform = 'translateY(' + (window.scrollY * 0.12) + 'px)';
+        }, { passive: true });
+    })();
+
+    /* ===== KEYBOARD: Close nav on Escape ===== */
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var nav = document.querySelector('.main-nav');
+            var toggle = document.querySelector('.nav-toggle');
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                if (toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.focus();
+                }
+            }
+        }
+    });
+
+    /* ===== KONTAKT FORM SUBMISSION ===== */
+    function handleKontaktSubmit(e) {
+        e.preventDefault();
+        var form = e.target;
+        var btn = document.getElementById('kontaktSubmitBtn');
+        var origText = btn.innerHTML;
+        btn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;"><circle cx="12" cy="12" r="10" opacity="0.25"/><path d="M12 2a10 10 0 019.95 9" opacity="1"/></svg> Wird gesendet...';
+        btn.disabled = true;
+        var data = new FormData(form);
+        var v = {};
+        data.forEach(function(val, key) { v[key] = val; });
+        var subject = encodeURIComponent('Neue Anfrage von ' + v.k_name + ' – wirsind200banken.de');
+        var body = encodeURIComponent(
+            'NEUE ANFRAGE über Website\n================================\n\n' +
+            'Name: ' + v.k_name + '\n' +
+            'Telefon: ' + v.k_telefon + '\n' +
+            'E-Mail: ' + (v.k_email || 'Nicht angegeben') + '\n' +
+            'Gewünschte Leistung: ' + (v.k_leistung || 'Nicht angegeben') + '\n\n' +
+            'Nachricht:\n' + v.k_nachricht + '\n'
+        );
+        setTimeout(function() {
+            window.location.href = 'mailto:info@wirsind200banken.de?subject=' + subject + '&body=' + body;
+            btn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Anfrage gesendet!';
+            btn.style.background = '#2daf7c';
+            setTimeout(function() {
+                btn.innerHTML = origText;
+                btn.disabled = false;
+                btn.style.background = '';
+                form.reset();
+            }, 4000);
+        }, 1200);
+    }
+</script>
+<style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
+</body>
+</html>
