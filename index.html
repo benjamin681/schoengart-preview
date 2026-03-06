@@ -124,18 +124,13 @@
             display: flex; align-items: center; gap: 14px;
         }
         .logo-icon {
-            width: 42px; height: 42px; background: var(--emerald);
-            border-radius: 12px; display: flex; align-items: center; justify-content: center;
-            color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 20px;
-            letter-spacing: 0.05em; position: relative; overflow: hidden;
+            width: 46px; height: 46px;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; flex-shrink: 0;
         }
-        .logo-icon::after {
-            content: ''; position: absolute; top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
-            animation: shimmer 3s ease-in-out infinite;
+        .logo-icon svg {
+            width: 100%; height: 100%;
         }
-        @keyframes shimmer { 0%, 100% { transform: translateX(-100%); } 50% { transform: translateX(100%); } }
         .logo-text {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.35rem; letter-spacing: 0.08em;
@@ -454,16 +449,34 @@
             font-size: 13px; color: var(--text-muted); line-height: 1.8;
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 30px; margin-top: 60px;
+        /* ===== TESTIMONIALS CAROUSEL ===== */
+        .testimonials-carousel {
+            margin-top: 60px;
+            overflow: hidden;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+        .testimonials-track {
+            display: flex;
+            gap: 30px;
+            animation: testimonialScroll 45s linear infinite;
+            width: max-content;
+        }
+        .testimonials-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes testimonialScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
         .testimonial-card {
             background: var(--bg-card);
             border-radius: 20px; padding: 36px;
             border: 1px solid rgba(0,0,0,0.05);
             transition: all 0.4s ease;
+            min-width: 380px; max-width: 380px;
+            flex-shrink: 0;
         }
         .testimonial-card:hover {
             transform: translateY(-4px);
@@ -645,7 +658,8 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-card { min-width: 320px; max-width: 320px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
             .process-grid { grid-template-columns: repeat(2, 1fr); }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -668,7 +682,8 @@
             .trust-inner { flex-direction: column; }
             .trust-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); justify-content: flex-start; }
             .trust-item:last-child { border-bottom: none; }
-            .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .testimonial-card { min-width: 280px; max-width: 280px; padding: 28px; }
             .process-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -686,7 +701,7 @@
 <header class="site-header" role="banner">
     <div class="container header-inner">
         <a href="#" class="logo">
-            <div class="logo-icon">SSR</div>
+            <div class="logo-icon"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="24" fill="#1a3c2a"/><text x="60" y="52" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="42" font-weight="400" letter-spacing="4" fill="#fff" dominant-baseline="middle">SSR</text><line x1="20" y1="70" x2="100" y2="70" stroke="#2daf7c" stroke-width="1.5" opacity="0.6"/><text x="60" y="86" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" letter-spacing="3" fill="#2daf7c" dominant-baseline="middle">BAUFINANZIERUNGEN</text></svg></div>
             <div class="logo-text">
                 SCHÖNGART SCHÜRLE RILL
                 <span>Baufinanzierungen</span>
@@ -938,55 +953,186 @@
         <h2 class="section-title scroll-reveal stagger-1">DAS SAGEN UNSERE<br><span class="accent">KUNDEN.</span></h2>
         <p class="section-subtitle scroll-reveal stagger-2">4,99 von 5 Sternen bei über 426 verifizierten Bewertungen auf KennstDuEinen.de</p>
 
-        <div class="testimonials-grid">
-            <div class="testimonial-card scroll-reveal">
-                <div class="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="testimonial-text">„Die verstehen ihr Handwerk! Von der ersten Beratung bis zur finalen Unterschrift wurde alles professionell, schnell und transparent abgewickelt."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">RS</div>
-                    <div>
-                        <div class="testimonial-name">Rudi S.</div>
-                        <div class="testimonial-date">Dezember 2025</div>
+        <div class="testimonials-carousel scroll-reveal">
+            <div class="testimonials-track" id="testimonialTrack">
+                <!-- Bewertung 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Die verstehen ihr Handwerk! Von der ersten Beratung bis zur finalen Unterschrift wurde alles professionell, schnell und transparent abgewickelt."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RS</div>
+                        <div>
+                            <div class="testimonial-name">Rudi S.</div>
+                            <div class="testimonial-date">Dezember 2025</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card scroll-reveal stagger-1">
-                <div class="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="testimonial-text">„Mit Herrn Rill habe ich den kompetentesten, freundlichsten und höflichsten Finanzberater kennengelernt. Die beste Starthilfe ins Eigenheim!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">WB</div>
-                    <div>
-                        <div class="testimonial-name">Wolfgang B.</div>
-                        <div class="testimonial-date">September 2025</div>
+                <!-- Bewertung 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Mit Herrn Rill habe ich den kompetentesten, freundlichsten und höflichsten Finanzberater kennengelernt. Die beste Starthilfe ins Eigenheim!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">WB</div>
+                        <div>
+                            <div class="testimonial-name">Wolfgang B.</div>
+                            <div class="testimonial-date">September 2025</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card scroll-reveal stagger-2">
-                <div class="testimonial-stars">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <!-- Bewertung 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Vom ersten Kontakt bis zum Kauf der Immobilie wurde ich hervorragend betreut. Fünf Sterne sind hier mehr als verdient!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">ES</div>
+                        <div>
+                            <div class="testimonial-name">Elisa S.</div>
+                            <div class="testimonial-date">August 2025</div>
+                        </div>
+                    </div>
                 </div>
-                <p class="testimonial-text">„Vom ersten Kontakt bis zum Kauf der Immobilie wurde ich hervorragend betreut. Fünf Sterne sind hier mehr als verdient!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">ES</div>
-                    <div>
-                        <div class="testimonial-name">Elisa S.</div>
-                        <div class="testimonial-date">August 2025</div>
+                <!-- Bewertung 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Herr Schöngart hat uns durch den kompletten Finanzierungsprozess begleitet. Immer erreichbar, immer kompetent. Absolute Empfehlung!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MK</div>
+                        <div>
+                            <div class="testimonial-name">Melanie K.</div>
+                            <div class="testimonial-date">Juli 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Wir haben dank SSR über 15.000€ an Zinsen gespart. Der Vergleich über 436 Banken hat sich mehr als gelohnt. Danke für die tolle Arbeit!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">TH</div>
+                        <div>
+                            <div class="testimonial-name">Thomas H.</div>
+                            <div class="testimonial-date">Juni 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Die Anschlussfinanzierung lief reibungslos. Bessere Konditionen als bei unserer Hausbank — und das bei weniger Aufwand für uns!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div>
+                            <div class="testimonial-name">Sandra L.</div>
+                            <div class="testimonial-date">Mai 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 7 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Als Erstkäufer hatten wir tausend Fragen. Herr Schürle hat sich für jede einzelne Zeit genommen. So stellt man sich Beratung vor!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div>
+                            <div class="testimonial-name">Julia M.</div>
+                            <div class="testimonial-date">April 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 8 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Bereits zum zweiten Mal über SSR finanziert. Auch bei der Anschlussfinanzierung wieder top Konditionen und erstklassige Beratung!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PW</div>
+                        <div>
+                            <div class="testimonial-name">Peter W.</div>
+                            <div class="testimonial-date">März 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 9 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Frau Riek hat unsere KfW-Förderung perfekt organisiert. Ohne sie hätten wir den Zuschuss nicht bekommen. Sehr empfehlenswert!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AH</div>
+                        <div>
+                            <div class="testimonial-name">Andreas H.</div>
+                            <div class="testimonial-date">Februar 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bewertung 10 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-text">„Schnell, unkompliziert und immer erreichbar. In nur 3 Wochen von der Anfrage bis zur Zusage. So macht Baufinanzierung Spaß!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">NK</div>
+                        <div>
+                            <div class="testimonial-name">Nadine K.</div>
+                            <div class="testimonial-date">Januar 2025</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1410,6 +1556,13 @@
                 form.reset();
             }, 4000);
         }, 1200);
+    }
+
+    /* ===== TESTIMONIAL CAROUSEL CLONE ===== */
+    var track = document.getElementById('testimonialTrack');
+    if (track) {
+        var cards = track.innerHTML;
+        track.innerHTML = cards + cards;
     }
 </script>
 <style>@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }</style>
